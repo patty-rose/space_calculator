@@ -4,7 +4,7 @@ describe('SpaceAges', () => {
   let testAge;
 
   beforeEach(() => {
-    testAge = new SpaceAges(30);
+    testAge = new SpaceAges(30, false, false, false, true, true, true);
   });
 
   test('should correctly create a spaceAges object with earth age', () => {
@@ -26,4 +26,8 @@ describe('SpaceAges', () => {
   test('should correctly calculate jupiterAge based on earthAge', () => {
     expect(testAge.calculateJupiterAge()).toEqual(356);
   });
+
+  test('should determine how many years a user has left to live on Eart', () => {
+    expect(testAge.calculateEarthYearsLeft()).toEqual(43);
+  })
 })

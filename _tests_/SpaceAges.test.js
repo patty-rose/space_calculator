@@ -11,7 +11,11 @@ describe('SpaceAges', () => {
     expect(testAge.earthAge).toEqual(30);
   });
   
-  test('should correctly calculate mercuryAge based on EarthAge', () => {
+  test('should correctly calculate mercuryAge based on earthAge', () => {
     expect(testAge.calculateMercuryAge()).toEqual(7);
-  })
+  });
+
+  test('should correctly calculate venusAge based on earthAge', () => {
+    expect(testAge.calculateVenusAge()).toEqual(19);
+  });
 })

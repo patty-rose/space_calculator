@@ -1,4 +1,0 @@
-export class spaceAgeCalculator {
-  constructor() {
-  }
-}

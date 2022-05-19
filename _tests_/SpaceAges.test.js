@@ -12,6 +12,6 @@ describe('SpaceAges', () => {
   });
   
   test('should correctly calculate mercuryAge based on EarthAge', () => {
-    expect(testAge.calculateMercuryAge()).toEqual(7.2);
+    expect(testAge.calculateMercuryAge()).toEqual(7);
   })
 })

@@ -1,6 +1,12 @@
 export default class SpaceAges {
-  constructor(earthAge) {
+  constructor(earthAge, isSmoker, sleepsWell, isRich, eatsFish, hasInboxZero, wearsTallSocks) {
     this.earthAge = earthAge;
+    this.isSmoker = isSmoker;
+    this.sleepsWell = sleepsWell;
+    this.isRich = isRich;
+    this.eatsFish = eatsFish;
+    this.hasInboxZero = hasInboxZero;
+    this.wearsTallSocks = wearsTallSocks;
     this.mercuryAge;
     this.venusAge;
   };
@@ -24,4 +30,16 @@ export default class SpaceAges {
     this.jupiterAge = (Math.round(this.earthAge * 11.86));
     return this.jupiterAge
   };
+
+  calculateEarthYearsLeft() {
+    let earthYearsLeft;//set earthYearsLeft variable
+    let earthYearsExpected = 72;//set earthYearsExpected variable
+    if (this.isSmoker === true) {
+      earthYearsExpected -= 1;
+    } else if (this.isSmoker === false) {
+      earthYearsExpected += 1//run through demographic booleans adding and subtracting on earthYearsExpected
+    //this.earthYearsExpected = earthYearsExpected;
+    // earthYearsLeft = earthYearsExpected - earthAge;
+    //return earthYearsLeft;
+  }
 }

@@ -13,5 +13,10 @@ export default class SpaceAges {
   calculateVenusAge() {
     this.venusAge = (Math.round(this.earthAge * .62));
     return this.venusAge
-  }
+  };
+
+  calculateMarsAge() {
+    this.marsAge = (Math.round(this.earthAge * 1.88));
+    return this.marsAge
+  };
 }

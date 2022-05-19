@@ -18,4 +18,8 @@ describe('SpaceAges', () => {
   test('should correctly calculate venusAge based on earthAge', () => {
     expect(testAge.calculateVenusAge()).toEqual(19);
   });
+
+  test('should correctly calculate marsAge based on earthAge', () => {
+    expect(testAge.calculateMarsAge()).toEqual(56);
+  });
 })

@@ -19,4 +19,9 @@ export default class SpaceAges {
     this.marsAge = (Math.round(this.earthAge * 1.88));
     return this.marsAge
   };
+
+  calculateJupiterAge() {
+    this.jupiterAge = (Math.round(this.earthAge * 11.86));
+    return this.jupiterAge
+  };
 }

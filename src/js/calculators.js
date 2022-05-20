@@ -9,26 +9,6 @@ export class Person {
     this.wearsTallSocks = wearsTallSocks;
   }
 
-  calculateMercuryAge() {
-    this.mercuryAge = (Math.round(this.earthAge * .24));
-    return this.mercuryAge
-  }
-
-  calculateVenusAge() {
-    this.venusAge = (Math.round(this.earthAge * .62));
-    return this.venusAge
-  }
-
-  calculateMarsAge() {
-    this.marsAge = (Math.round(this.earthAge * 1.88));
-    return this.marsAge
-  }
-
-  calculateJupiterAge() {
-    this.jupiterAge = (Math.round(this.earthAge * 11.86));
-    return this.jupiterAge
-  }
-
   calculateEarthYearsLeft() {
     let earthYearsLeft;
     let yearsToLive = 72;

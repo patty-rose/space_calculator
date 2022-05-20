@@ -44,4 +44,12 @@ describe('Calculators', () => {
     expect(calculator.calcPlanetaryAge("mars")).toEqual(56);
     expect(calculator.calcPlanetaryAge("jupiter")).toEqual(356);
   })
+
+  test('should determine how many years Person should expect to live on each planet', () => {
+    expect(calculator.calcLifeExpectancy("earth")).toEqual(73);
+    expect(calculator.calcLifeExpectancy("mercury")).toEqual(18);
+    expect(calculator.calcLifeExpectancy("venus")).toEqual(45);
+    expect(calculator.calcLifeExpectancy("mars")).toEqual(137);
+    expect(calculator.calcLifeExpectancy("jupiter")).toEqual(866);
+  });
 })

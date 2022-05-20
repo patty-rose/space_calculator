@@ -54,10 +54,10 @@ describe('Calculators', () => {
   });
 
   test('should determine how many years Person has left to live on each planet', () => {
-    expect(calculator.calcYearsLeft("earth")).toEqual(43);
-    expect(calculator.calcYearsLeft("mercury")).toEqual(11);
-    expect(calculator.calcYearsLeft("venus")).toEqual(26);
-    expect(calculator.calcYearsLeft("mars")).toEqual(81);
-    expect(calculator.calcYearsLeft("jupiter")).toEqual(510);
+    expect(calculator.calcYearsLeft("earth")).toEqual(43 + " years left!");
+    expect(calculator.calcYearsLeft("mercury")).toEqual(11 + " years left!");
+    expect(calculator.calcYearsLeft("venus")).toEqual(26 + " years left!");
+    expect(calculator.calcYearsLeft("mars")).toEqual(81 + " years left!");
+    expect(calculator.calcYearsLeft("jupiter")).toEqual(510 + " years left!");
   })
 })

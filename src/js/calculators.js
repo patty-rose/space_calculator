@@ -63,4 +63,17 @@ export class Calculators {
     let planetaryLifeExpectancy = (Math.round(yearsToLive * planetProportion));
     return planetaryLifeExpectancy;
   }
+
+  calcYearsLeft(planet) {
+    const planetaryAge = this.calcPlanetaryAge(planet);
+    const planetaryLifeExpectancy = this.calcLifeExpectancy(planet);
+    let yearsLeft;
+    if (planetaryLifeExpectancy > planetaryAge) {
+      yearsLeft = (planetaryLifeExpectancy - planetaryAge);
+      return yearsLeft + " years left!"
+    } else {
+      yearsLeft = (planetaryAge - planetaryLifeExpectancy);
+      return yearsLeft + " years beyond expectancy!"
+    } 
+  }
 }

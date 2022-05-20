@@ -10,10 +10,6 @@ describe('Person', () => {
   test('should correctly create a Person object with Earth age', () => {
     expect(testPerson.earthAge).toEqual(30);
   });
-
-  test('should determine how many years a user has left to live on Earth', () => {
-    expect(testPerson.calculateEarthYearsLeft()).toEqual(43);
-  });
 });
 
 describe('Calculators', () => {

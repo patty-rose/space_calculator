@@ -8,23 +8,6 @@ export class Person {
     this.hasInboxZero = hasInboxZero;
     this.wearsTallSocks = wearsTallSocks;
   }
-
-  calculateEarthYearsLeft() {
-    let earthYearsLeft;
-    let yearsToLive = 72;
-    (this.isSmoker === true) ? yearsToLive -= 1 : yearsToLive += 1;
-    (this.sleepsWell === true) ? yearsToLive += 3 : yearsToLive -= 3;
-    (this.isRich === true) ? yearsToLive += 6 : yearsToLive -= 6;
-    (this.eatsFish === true) ? yearsToLive += 2 : yearsToLive -= 2;
-    (this.hasInboxZero === true) ? yearsToLive += 4 : yearsToLive -= 4;
-    (this.wearsTallSocks === true) ? yearsToLive += 3 : yearsToLive -= 3;
-    this.earthYearsExpected = yearsToLive;
-    if (yearsToLive > this.earthAge) {
-      earthYearsLeft = (yearsToLive - this.earthAge);
-    } else {
-      earthYearsLeft = (this.earthAge - yearsToLive);
-    } return earthYearsLeft
-  }
 }
 
 export class Calculators {

@@ -32,14 +32,19 @@ export default class SpaceAges {
   };
 
   calculateEarthYearsLeft() {
-    let earthYearsLeft;//set earthYearsLeft variable
-    let earthYearsExpected = 72;//set earthYearsExpected variable
-    if (this.isSmoker === true) {
-      earthYearsExpected -= 1;
-    } else if (this.isSmoker === false) {
-      earthYearsExpected += 1//run through demographic booleans adding and subtracting on earthYearsExpected
-    //this.earthYearsExpected = earthYearsExpected;
-    // earthYearsLeft = earthYearsExpected - earthAge;
-    //return earthYearsLeft;
+    let earthYearsLeft;
+    let yearsToLive = 72;
+    (this.isSmoker === true) ? yearsToLive -= 1 : yearsToLive += 1;
+    (this.sleepsWell === true) ? yearsToLive += 3 : yearsToLive -= 3;
+    (this.isRich === true) ? yearsToLive += 6 : yearsToLive -= 6;
+    (this.eatsFish === true) ? yearsToLive += 2 : yearsToLive -= 2;
+    (this.hasInboxZero === true) ? yearsToLive += 4 : yearsToLive -= 4;
+    (this.wearsTallSocks === true) ? yearsToLive += 3 : yearsToLive -= 3;
+    this.earthYearsExpected = yearsToLive;
+    if (yearsToLive > this.earthAge) {
+      earthYearsLeft = (yearsToLive - this.earthAge);
+    } else {
+      earthYearsLeft = (this.earthAge - yearsToLive);
+    } return earthYearsLeft
   }
 }

@@ -50,4 +50,17 @@ export class Calculators {
     const planetaryAge = (Math.round(this.person.earthAge * planetProportion));
     return planetaryAge
   }
+
+  calcLifeExpectancy(planet) {
+    const planetProportion = this.calcPlanetProportion(planet);
+    let yearsToLive = 72;
+    (this.person.isSmoker === true) ? yearsToLive -= 1 : yearsToLive += 1;
+    (this.person.sleepsWell === true) ? yearsToLive += 3 : yearsToLive -= 3;
+    (this.person.isRich === true) ? yearsToLive += 6 : yearsToLive -= 6;
+    (this.person.eatsFish === true) ? yearsToLive += 2 : yearsToLive -= 2;
+    (this.person.hasInboxZero === true) ? yearsToLive += 4 : yearsToLive -= 4;
+    (this.person.wearsTallSocks === true) ? yearsToLive += 3 : yearsToLive -= 3;
+    let planetaryLifeExpectancy = (Math.round(yearsToLive * planetProportion));
+    return planetaryLifeExpectancy;
+  }
 }

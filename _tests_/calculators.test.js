@@ -1,9 +1,12 @@
 import Calculators from '../src/js/calculators.js'
+import Person from '../src/js/person';
 
 describe('Calculators', () => {
   let calculator;
+  let testPerson;
 
   beforeEach(() => {
+    testPerson = new Person(30, false, false, false, true, true, true);
     calculator = new Calculators("testPerson");
   })
 
@@ -18,4 +21,12 @@ describe('Calculators', () => {
     expect(calculator.calcPlanetProportion("mars")).toEqual(1.88);
     expect(calculator.calcPlanetProportion("jupiter")).toEqual(11.86);
   });
+
+  test('should calculate persons age on the different planets', () => {
+    expect(calculator.calcPlanetaryAge("earth")).toEqual(30);
+    expect(calculator.calcPlanetaryAge("mercury")).toEqual(7);
+    expect(calculator.calcPlanetaryAge("venus")).toEqual(19);
+    expect(calculator.calcPlanetaryAge("mars")).toEqual(56);
+    expect(calculator.calcPlanetaryAge("jupiter")).toEqual(356);
+  })
 })

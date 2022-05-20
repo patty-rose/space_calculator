@@ -1,3 +1,5 @@
+import Person from '../src/js/person'; 
+
 export default class Calculators {
   constructor(person) {
     this.person = person;

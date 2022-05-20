@@ -1,3 +1,5 @@
+import Calculators from '../src/js/calculators.js'
+
 export default class Person {
   constructor(earthAge, isSmoker, sleepsWell, isRich, eatsFish, hasInboxZero, wearsTallSocks) {
     this.earthAge = earthAge;
@@ -7,8 +9,6 @@ export default class Person {
     this.eatsFish = eatsFish;
     this.hasInboxZero = hasInboxZero;
     this.wearsTallSocks = wearsTallSocks;
-    this.mercuryAge;
-    this.venusAge;
   }
 
   calculateMercuryAge() {

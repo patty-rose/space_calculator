@@ -52,4 +52,12 @@ describe('Calculators', () => {
     expect(calculator.calcLifeExpectancy("mars")).toEqual(137);
     expect(calculator.calcLifeExpectancy("jupiter")).toEqual(866);
   });
+
+  test('should determine how many years Person has left to live on each planet', () => {
+    expect(calculator.calcYearsLeft("earth")).toEqual(43);
+    expect(calculator.calcYearsLeft("mercury")).toEqual(11);
+    expect(calculator.calcYearsLeft("venus")).toEqual(26);
+    expect(calculator.calcYearsLeft("mars")).toEqual(81);
+    expect(calculator.calcYearsLeft("jupiter")).toEqual(510);
+  })
 })

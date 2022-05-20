@@ -55,5 +55,15 @@ describe('Calculators', () => {
     expect(calculator.calcYearsLeft("venus")).toEqual(26 + " years left!");
     expect(calculator.calcYearsLeft("mars")).toEqual(81 + " years left!");
     expect(calculator.calcYearsLeft("jupiter")).toEqual(510 + " years left!");
+  });
+
+  test('should determine how many years Person has lived beyond their life expectancy on each planet', () => {
+    const tooOldPerson = new Person(100, true, true, true, false, false, false);
+    const calc = new Calculators(tooOldPerson);
+    expect(calc.calcYearsLeft("earth")).toEqual(29 + " years beyond expectancy!");
+    expect(calc.calcYearsLeft("mercury")).toEqual(7 + " years beyond expectancy!");
+    expect(calc.calcYearsLeft("venus")).toEqual(18 + " years beyond expectancy!");
+    expect(calc.calcYearsLeft("mars")).toEqual(55 + " years beyond expectancy!");
+    expect(calc.calcYearsLeft("jupiter")).toEqual(344 + " years beyond expectancy!");
   })
 })

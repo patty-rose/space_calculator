@@ -1,5 +1,26 @@
 body {
-  margin:50px;
-  background-color: aquamarine;
+  background-image: url("../assets/images/universe.jpg");
+  background-size: 100%;
+  background-repeat: none;
+  background-color: #192531;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  padding: 20px;
+  margin-top: 100px;
+  max-width: 50%;
+}
+
+.btn{
+  margin:20px;
   font-family: Arial, Helvetica, sans-serif;
 }

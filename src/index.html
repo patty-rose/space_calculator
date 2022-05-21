@@ -4,77 +4,47 @@
   <title>Space Calculator</title>
 </head>
 <body>
-  <h3>Fill out the form below to find out how old you are on each planet and how long you have left to live!</h3>
-  <form id="spaceAge">
-    <label for="age">How old are you?</label>
-    <input id="age" type="number">
-    <div class="isSmoker">
-      <label for="isSmoker">Do you smoke tobacco?</label>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="isSmoker" value="true">
-        <label class="form-check-label" for="isSmoker">yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="isSmoker2" value="false">
-        <label class="form-check-label" for="isSmoker2">no</label>
-      </div>
+  <div class="container">
+    <div class="intro">
+    <h1>Welcome to the Solar System!</h1>
+    <h2>Time passes so quickly here on Earth, but what is it like on other planets? If a year is measured by how long it takes us to get around the sun, how long is a year on  Mercury or Jupiter, for example?</h2>
+    <h3>Fill out the form below to find out how old you are on some of the other planets in our Solar System and how many estimated years you have left to live!</h3>
+    <form id="spaceAge">
+      <label for="age">How old are you in Earth years?</label><br>
+      <input id="age" type="number" min="0"><br>
+      <label for="isSmoker">Do you smoke tobacco?</label><br>
+      <select name="isSmoker" id="isSmoker">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select><br>
+      <label for="sleepsWell">Do you sleep 7 or more hours a night?</label><br>
+      <select name="sleepsWell" id="sleepsWell">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select><br>
+      <label for="isRich">Are you rich?</label><br>
+      <select name="isRich" id="isRich">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select><br>
+      <label for="eatsFish">Do you eat fish?</label><br>
+      <select name="eatsFish" id="eatsFish">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select><br>
+      <label for="hasInboxZero">Do you try to empty your email inbox regularly?</label><br>
+      <select name="hasInboxZero" id="hasInboxZero">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select><br>
+      <label for="wearsTallSocks">Do you wear socks that go up past your ankles?</label><br>
+      <select name="hasInboxZero" id="hasInboxZero">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select><br>
+      <button type="submit" class="btn btn-dark">Submit info</button>
+    </form>
     </div>
-    <div class="sleepsWell">
-      <label for="sleepsWell">Do you regularly sleep 7 or more hours a night?</label>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sleepsWell" value="true">
-        <label class="form-check-label" for="sleepsWell">yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sleepsWell2" value="false">
-        <label class="form-check-label" for="sleepsWell2">no</label>
-      </div>
-    </div>
-    <div class="isRich">
-      <label for="isRich">Are you rich?</label>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="isRich" value="true">
-        <label class="form-check-label" for="isRich">yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="isRich2" value="false">
-        <label class="form-check-label" for="isRich2">no</label>
-      </div>
-    </div>
-    <div class="eatsFish">
-      <label for="eatsFish">Do you eat fish?</label>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="eatsFish" value="true">
-        <label class="form-check-label" for="eatsFish">yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="eatsFish2" value="false">
-        <label class="form-check-label" for="eatsFish2">no</label>
-      </div>
-    </div>
-    <div class="hasInboxZero">
-      <label for="hasInboxZero">Do you try to empty your email inbox regularly?</label>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hasInboxZero" value="true">
-        <label class="form-check-label" for="hasInboxZero">yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hasInboxZero2" value="false">
-        <label class="form-check-label" for="hasInboxZero2">no</label>
-      </div>
-    </div>
-    <div class="wearsTallSocks">
-      <label for="age">Do your socks go higher than your ankles?</label>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="wearsTallSocks" value="true">
-        <label class="form-check-label" for="wearsTallSocks">yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="wearsTallSocks2" value="false">
-        <label class="form-check-label" for="wearsTallSocks2">no</label>
-      </div>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+  </div>
 </body>
 </html>

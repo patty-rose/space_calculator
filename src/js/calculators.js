@@ -25,13 +25,13 @@ export class Calculators {
       jupiter : 11.86,
     };
     planetProportion = planetYearsMap[planet];
-    return planetProportion
+    return planetProportion;
   }
 
   calcPlanetaryAge(planet) {
     const planetProportion = this.calcPlanetProportion(planet);
     const planetaryAge = (Math.round(this.person.earthAge * planetProportion));
-    return planetaryAge
+    return planetaryAge;
   }
 
   calcLifeExpectancy(planet) {
@@ -53,10 +53,10 @@ export class Calculators {
     let yearsLeft;
     if (planetaryLifeExpectancy > planetaryAge) {
       yearsLeft = (planetaryLifeExpectancy - planetaryAge);
-      return yearsLeft + " years left!"
+      return yearsLeft + " years left!";
     } else {
       yearsLeft = (planetaryAge - planetaryLifeExpectancy);
-      return yearsLeft + " years beyond expectancy!"
+      return yearsLeft + " years beyond expectancy!";
     } 
   }
 }

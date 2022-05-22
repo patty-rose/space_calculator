@@ -1,11 +1,11 @@
-# _NAME_
+# _Space Calculator_
 
 #### By _**Patty Otero**_
 
-#### _description_
+#### _A practice website that uses object-oriented javascript to calculate how old a user is on other planets._
 
 ## Github pages site: 
-https://patty-rose.github.io/TITLEHERE
+https://patty-rose.github.io/space_calculator
 ## Technologies Used
 
 * _HTML_
@@ -21,11 +21,11 @@ https://patty-rose.github.io/TITLEHERE
 
 ## Description
 
-_description_
+_A user can put in their Earth age and some silly demographic information. And once submitted, the page calculate how many solar years we are on Mercury, Venus, Earth, Mars, and Jupiter. It also calculates how many estimated years the user could expect to live based on their demographic info._
 
 ## Setup/Installation Requirements
 
-* View at Github pages site: https://patty-rose.github.io/TITLEHERE or follow next steps
+* View at Github pages site: https://patty-rose.github.io/space_calculator or follow next steps
 * Clone this repository to your desktop
 * navigate to the directory in your terminal
 * install with npm: $npm install

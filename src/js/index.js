@@ -5,15 +5,6 @@ import '../css/styles.css';
 import { Calculators, Person } from './calculators';
 
 // UI Logic
-function calculateAge(calculator, planet) {
-  const planetaryAge = calculator.calcPlanetaryAge(planet);
-  return planetaryAge;
-}
-
-function calculateYearsLeft(calculator, planet) {
-  const yearsLeft = calculator.calcYearsLeft(planet);
-  return yearsLeft;
-}
 
 // JQUERY UI Logic
 $(document).ready(function() {
@@ -29,16 +20,15 @@ $(document).ready(function() {
     const person = new Person(earthAge, isSmoker, sleepsWell, isRich, eatsFish, hasInboxZero, wearsTallSocks);
     const calculator = new Calculators(person);
 
-    const mercuryAge = calculateAge(calculator, "mercury");
-    const mercuryYearsLeft = calculateYearsLeft(calculator, "mercury");
-    const venusAge = calculateAge(calculator, "venus");
-    const venusYearsLeft = calculateYearsLeft(calculator, "venus");
-    const earthAgeDisplay = earthAge;
-    const earthYearsLeft = calculateYearsLeft(calculator, "earth");
-    const marsAge = calculateAge(calculator, "mars");
-    const marsYearsLeft = calculateYearsLeft(calculator, "mars");
-    const jupiterAge = calculateAge(calculator, "jupiter");
-    const jupiterYearsLeft = calculateYearsLeft(calculator, "jupiter");
-    console.log(venusAge, venusYearsLeft, mercuryAge, mercuryYearsLeft, earthAge, earthAgeDisplay, earthYearsLeft, marsAge, marsYearsLeft, jupiterAge, jupiterYearsLeft);
+    $("#mercuryAge").text(calculator.calcPlanetaryAge("mercury"));
+    $("#mercuryYearsLeft").text(calculator.calcYearsLeft("mercury"));
+    $("#venusAge").text(calculator.calcPlanetaryAge("venus"));
+    $("#venusYearsLeft").text(calculator.calcYearsLeft("venus"));
+    $("#earthAge").text(earthAge);
+    $("#earthYearsLeft").text(calculator.calcYearsLeft("earth"));
+    $("#marsAge").text(calculator.calcPlanetaryAge("mars"));
+    $("#marsYearsLeft").text(calculator.calcYearsLeft("mars"));
+    $("jupiterAge").text(calculator.calcPlanetaryAge("jupiter"));
+    $("jupiterYearsLeft").text(calculator.calcYearsLeft("jupiter"));
   });
 });

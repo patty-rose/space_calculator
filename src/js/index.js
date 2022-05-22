@@ -28,7 +28,14 @@ $(document).ready(function() {
     $("#earthYearsLeft").text(calculator.calcYearsLeft("earth"));
     $("#marsAge").text(calculator.calcPlanetaryAge("mars"));
     $("#marsYearsLeft").text(calculator.calcYearsLeft("mars"));
-    $("jupiterAge").text(calculator.calcPlanetaryAge("jupiter"));
-    $("jupiterYearsLeft").text(calculator.calcYearsLeft("jupiter"));
+    $("#jupiterAge").text(calculator.calcPlanetaryAge("jupiter"));
+    $("#jupiterYearsLeft").text(calculator.calcYearsLeft("jupiter"));
+
+    $(".results").show();
+    $(".intro").hide();
+  });
+
+  $("#startOver").click(function() {
+    location.reload(true);
   });
 });

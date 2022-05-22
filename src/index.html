@@ -5,84 +5,109 @@
 </head>
 <body>
   <div class="container">
-    <div class="intro">
-    <h1>Welcome to the Solar System!</h1>
-    <h2>Time passes so quickly here on Earth, but what is it like on other planets? If a year is measured by how long it takes us to get around the sun, how long is a year on  Mercury or Jupiter, for example?</h2>
-    <h3>Fill out the form below to find out how old you are on some of the other planets in our Solar System and how many estimated years you have left to live!</h3>
+    <div class="intro col-md-8 offset-md-2">
+    <h1>Welcome to our Solar System!</h1>
+    <h4>Time passes so quickly here on Earth, but what is it like on other planets? If a year is measured by how long it takes us to get around the sun, how long is a year on  Mercury or Jupiter, for example?</h4>
+    <h6>Fill out the form below to find out how old you are on some of the other planets in our Solar System and how many estimated years you have left to live!</h6>
     <form id="spaceAge">
-      <label for="age">How old are you in Earth years?</label><br>
-      <input id="age" type="number" min="0"><br>
-      <label for="isSmoker">Do you smoke tobacco?</label><br>
-      <select name="isSmoker" id="isSmoker">
-        <option value="true">yes</option>
-        <option value="false">no</option>
-      </select><br>
-      <label for="sleepsWell">Do you sleep 7 or more hours a night?</label><br>
-      <select name="sleepsWell" id="sleepsWell">
-        <option value="true">yes</option>
-        <option value="false">no</option>
-      </select><br>
-      <label for="isRich">Are you rich?</label><br>
-      <select name="isRich" id="isRich">
-        <option value="true">yes</option>
-        <option value="false">no</option>
-      </select><br>
-      <label for="eatsFish">Do you eat fish?</label><br>
-      <select name="eatsFish" id="eatsFish">
-        <option value="true">yes</option>
-        <option value="false">no</option>
-      </select><br>
-      <label for="hasInboxZero">Do you try to empty your email inbox regularly?</label><br>
-      <select name="hasInboxZero" id="hasInboxZero">
-        <option value="true">yes</option>
-        <option value="false">no</option>
-      </select><br>
-      <label for="wearsTallSocks">Do you wear socks that go up past your ankles?</label><br>
-      <select name="hasInboxZero" id="hasInboxZero">
-        <option value="true">yes</option>
-        <option value="false">no</option>
-      </select><br>
-      <button type="submit" class="btn btn-dark">Submit info</button>
+      <div class="form-group row">
+        <label class="formLabel col col-form-label" for="age">How old are you in Earth years?</label>
+          <input class="form-control" id="age" type="number" min="0"><br>
+      </div>
+      <div class="form-group row">
+        <label class="formLabel col col-form-label" for="isSmoker">Do you smoke tobacco?</label>      
+        <select name="isSmoker" id="isSmoker" class="dropDown form-control">
+          <option value="true">yes</option>
+          <option value="false">no</option>
+        </select><br>
+      </div>
+      <div class="form-group row">
+        <label class="formLabel col col-form-label" for="sleepsWell">Do you sleep 7 or more hours a night?</label>
+        <select name="sleepsWell" id="sleepsWell" class="dropDown form-control">
+          <option value="true">yes</option>
+          <option value="false">no</option>
+        </select><br>
+      </div>
+      <div class="form-group row">
+        <label class="formLabel col col-form-label" for="isRich">Are you rich?</label>
+        <select name="isRich" id="isRich" class="dropDown form-control">
+          <option value="true">yes</option>
+          <option value="false">no</option>
+        </select><br>
+      </div>
+      <div class="form-group row">
+        <label class="formLabel col col-form-label" for="eatsFish">Do you eat fish?</label>
+        <select name="eatsFish" id="eatsFish" class="dropDown form-control">
+          <option value="true">yes</option>
+          <option value="false">no</option>
+        </select><br>
+      </div>
+      <div class="form-group row">
+        <label class="formLabel col col-form-label" for="hasInboxZero">Do you try to empty your email inbox regularly?</label>
+        <select name="hasInboxZero" id="hasInboxZero" class="dropDown form-control">
+          <option value="true">yes</option>
+          <option value="false">no</option>
+        </select><br>
+      </div>
+      <div class="form-group row">
+        <label class="formLabel col col-form-label" for="wearsTallSocks">Do you wear socks that go up past your ankles?</label>
+        <select name="wearsTallSocks" id="wearsTallSocks" class="dropDown form-control">
+          <option value="true">yes</option>
+          <option value="false">no</option>
+        </select><br>
+      </div>
+      <button type="submit" class="btn btn-warning">Submit info</button>
     </form>
     </div>
     <div class="results">
-      <div class='some-page-wrapper'>
-        <div class='row'>
-          <div class='column'>
-            <div class='mercury-column'>
-              <h3>Mercury</h3>
-              <img class="planets" src="./assets/images/mercury.png" alt="merucry">
-              <p>You are <span id="mercuryAge"></span> Mercurian years old!</p>
-              <p>How many more Mercurian years can you expect to live?</p>
-              <span id="mercuryYearsLeft"></span>
-            </div>
+      <div class='row'>
+        <div class='column'>
+          <div class='mercury-column'>
+            <h3>Mercury</h3>
+            <img class="planets" src="./assets/images/mercury.png" alt="merucry">
+            <h4>You are <span id="mercuryAge"></span> Mercurian years old!</h4>
+            <p>How many more Mercurian years can you expect to live?</p>
+            <h4><span id="mercuryYearsLeft"></span></h4>
           </div>
-          <div class='column'>
-            <div class='venus-column'>
-              <h3>Venus</h3>
-              <img class="planets" src="./assets/images/venus.png" alt="venus">
-            </div>
+        </div>
+        <div class='column'>
+          <div class='venus-column'>
+            <h3>Venus</h3>
+            <img class="planets" src="./assets/images/venus.png" alt="venus">
+            <h4>You are <span id="venusAge"></span> Venusian years old!</h4>
+            <p>How many more Venusian years can you expect to live?</p>
+            <h4><span id="venusYearsLeft"></span></h4>
           </div>
-          <div class='column'>
-            <div class='earth-column'>
-              <h3>Earth</h3>
-              <img class="planets" src="./assets/images/earth.png" alt="earth">
-            </div>
+        </div>
+        <div class='column'>
+          <div class='earth-column'>
+            <h3>Earth</h3>
+            <img class="planets" src="./assets/images/earth.png" alt="earth">
+            <h4>You are <span id="earthAge"></span> Earth years old!</h4>
+            <p>How many more Earth years can you expect to live?</p>
+            <h4><span id="earthYearsLeft"></span></h4>
           </div>
-          <div class='column'>
-            <div class='mars-column'>
-              <h3>Mars</h3>
-              <img class="planets" src="./assets/images/mars.png" alt="mars">
-            </div>
+        </div>
+        <div class='column'>
+          <div class='mars-column'>
+            <h3>Mars</h3>
+            <img class="planets" src="./assets/images/mars.png" alt="mars">
+            <h4>You are <span id="marsAge"></span> Marsian years old!</h4>
+            <p>How many more Marsian years can you expect to live?</p>
+            <h4><span id="marsYearsLeft"></span></h4>
           </div>
-          <div class='column'>
-            <div class='jupiter-column'>
-              <h3>Jupiter</h3>
-              <img class="planets" src="./assets/images/jupiter.png" alt="jupiter">
-            </div>
+        </div>
+        <div class='column'>
+          <div class='jupiter-column'>
+            <h3>Jupiter</h3>
+            <img class="planets" src="./assets/images/jupiter.png" alt="jupiter">
+            <h4>You are <span id="jupiterAge"></span> Jupiterian years old!</h4>
+            <p>How many more Jupiterian years can you expect to live?</p>
+            <h4><span id="jupiterYearsLeft"></span></h4>
           </div>
         </div>
       </div>
+      <button type="button" class="btn btn-warning" id="startOver">Start over!</button>
     </div>
   </div>
 </body>

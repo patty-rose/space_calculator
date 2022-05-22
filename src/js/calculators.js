@@ -18,11 +18,11 @@ export class Calculators {
   calcPlanetProportion(planet) {
     let planetProportion;
     const planetYearsMap = {
-      earth : 1,
-      mercury : .24,
-      venus : .62,
-      mars : 1.88,
-      jupiter : 11.86,
+      earth : 100,
+      mercury : 24,
+      venus : 62,
+      mars : 188,
+      jupiter : 1186,
     };
     planetProportion = planetYearsMap[planet];
     return planetProportion;
@@ -30,7 +30,7 @@ export class Calculators {
 
   calcPlanetaryAge(planet) {
     const planetProportion = this.calcPlanetProportion(planet);
-    const planetaryAge = (Math.round(this.person.earthAge * planetProportion));
+    const planetaryAge = (Math.round(this.person.earthAge * (100 / planetProportion)));
     return planetaryAge;
   }
 
@@ -43,7 +43,7 @@ export class Calculators {
     (this.person.eatsFish === true) ? yearsToLive += 2 : yearsToLive -= 2;
     (this.person.hasInboxZero === true) ? yearsToLive += 4 : yearsToLive -= 4;
     (this.person.wearsTallSocks === true) ? yearsToLive += 3 : yearsToLive -= 3;
-    let planetaryLifeExpectancy = (Math.round(yearsToLive * planetProportion));
+    let planetaryLifeExpectancy = (Math.round(yearsToLive * (100 / planetProportion)));
     return planetaryLifeExpectancy;
   }
 
@@ -53,10 +53,10 @@ export class Calculators {
     let yearsLeft;
     if (planetaryLifeExpectancy > planetaryAge) {
       yearsLeft = (planetaryLifeExpectancy - planetaryAge);
-      return yearsLeft + " years left!";
+      return yearsLeft + " more years!";
     } else {
       yearsLeft = (planetaryAge - planetaryLifeExpectancy);
-      return yearsLeft + " years beyond expectancy!";
+      return "You have already lived " + yearsLeft + " years beyond expectancy!";
     } 
   }
 }

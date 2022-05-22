@@ -4,8 +4,6 @@
 
 #### _A practice website that uses object-oriented javascript to calculate how old a user is on other planets._
 
-## Github pages site: 
-https://patty-rose.github.io/space_calculator
 ## Technologies Used
 
 * _HTML_
@@ -25,7 +23,6 @@ _A user can put in their Earth age and some silly demographic information. And o
 
 ## Setup/Installation Requirements
 
-* View at Github pages site: https://patty-rose.github.io/space_calculator or follow next steps
 * Clone this repository to your desktop
 * navigate to the directory in your terminal
 * install with npm: $npm install

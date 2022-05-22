@@ -35,35 +35,35 @@ describe('Calculators', () => {
 
   test('should calculate persons age on the different planets', () => {
     expect(calculator.calcPlanetaryAge("earth")).toEqual(30);
-    expect(calculator.calcPlanetaryAge("mercury")).toEqual(7);
-    expect(calculator.calcPlanetaryAge("venus")).toEqual(19);
-    expect(calculator.calcPlanetaryAge("mars")).toEqual(56);
-    expect(calculator.calcPlanetaryAge("jupiter")).toEqual(356);
+    expect(calculator.calcPlanetaryAge("mercury")).toEqual(125);
+    expect(calculator.calcPlanetaryAge("venus")).toEqual(48);
+    expect(calculator.calcPlanetaryAge("mars")).toEqual(16);
+    expect(calculator.calcPlanetaryAge("jupiter")).toEqual(3);
   })
 
   test('should determine how many years Person should expect to live on each planet', () => {
     expect(calculator.calcLifeExpectancy("earth")).toEqual(73);
-    expect(calculator.calcLifeExpectancy("mercury")).toEqual(18);
-    expect(calculator.calcLifeExpectancy("venus")).toEqual(45);
-    expect(calculator.calcLifeExpectancy("mars")).toEqual(137);
-    expect(calculator.calcLifeExpectancy("jupiter")).toEqual(866);
+    expect(calculator.calcLifeExpectancy("mercury")).toEqual(304);
+    expect(calculator.calcLifeExpectancy("venus")).toEqual(118);
+    expect(calculator.calcLifeExpectancy("mars")).toEqual(39);
+    expect(calculator.calcLifeExpectancy("jupiter")).toEqual(6);
   });
 
   test('should determine how many years Person has left to live on each planet', () => {
-    expect(calculator.calcYearsLeft("earth")).toEqual(43 + " years left!");
-    expect(calculator.calcYearsLeft("mercury")).toEqual(11 + " years left!");
-    expect(calculator.calcYearsLeft("venus")).toEqual(26 + " years left!");
-    expect(calculator.calcYearsLeft("mars")).toEqual(81 + " years left!");
-    expect(calculator.calcYearsLeft("jupiter")).toEqual(510 + " years left!");
+    expect(calculator.calcYearsLeft("earth")).toEqual(43 + " more years!");
+    expect(calculator.calcYearsLeft("mercury")).toEqual(11 + " more years!");
+    expect(calculator.calcYearsLeft("venus")).toEqual(26 + " more years!");
+    expect(calculator.calcYearsLeft("mars")).toEqual(81 + " more years!");
+    expect(calculator.calcYearsLeft("jupiter")).toEqual(510 + " more years!");
   });
 
   test('should determine how many years Person has lived beyond their life expectancy on each planet', () => {
     const tooOldPerson = new Person(100, true, true, true, false, false, false);
     const calc = new Calculators(tooOldPerson);
-    expect(calc.calcYearsLeft("earth")).toEqual(29 + " years beyond expectancy!");
-    expect(calc.calcYearsLeft("mercury")).toEqual(7 + " years beyond expectancy!");
-    expect(calc.calcYearsLeft("venus")).toEqual(18 + " years beyond expectancy!");
-    expect(calc.calcYearsLeft("mars")).toEqual(55 + " years beyond expectancy!");
-    expect(calc.calcYearsLeft("jupiter")).toEqual(344 + " years beyond expectancy!");
-  })
+    expect(calc.calcYearsLeft("earth")).toEqual("You have already lived " + 29 + " years beyond expectancy!");
+    expect(calc.calcYearsLeft("mercury")).toEqual("You have already lived " + 7 + " years beyond expectancy!");
+    expect(calc.calcYearsLeft("venus")).toEqual("You have already lived " + 18 + " years beyond expectancy!");
+    expect(calc.calcYearsLeft("mars")).toEqual("You have already lived " + 55 + " years beyond expectancy!");
+    expect(calc.calcYearsLeft("jupiter")).toEqual("You have already lived " + 344 + " years beyond expectancy!");
+  });
 })
